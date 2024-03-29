@@ -29,7 +29,7 @@ int main() {
         findLessThanTen(std[i]);
     }
     FILE *fptr;
-    fptr = fopen("./lab12/no2/std10.dat","w");
+    fptr = fopen("./lab12/no2/std10.txt","w");
     for(i=0;i<10;i++)
     {
         fprintf(fptr,"%s %s",std[i].name,std[i].surname);
@@ -69,15 +69,14 @@ float findAverage(Student s) {
 }
 void findLessThanTen(Student s) {
 	int i,count=0;
-	printf("\n\nScore less than 0");
+	printf("\n\nScore less than 10");
 	for (i=0; i<NO_SCORE; i++) {
-        if (s.score[i] < 0) {
-            printf("\n\tTest no.%d - %d",i+1,s.score[i]);
+        if (s.score[i] < 10) {
+            printf("\n\tTest no.%d - %d\n",i+1,s.score[i]);
             count++;
 		}
 	}
 	if (count==0) /*    0 */
 	printf(" -> None\n");
 }
-
 
