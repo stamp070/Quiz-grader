@@ -25,16 +25,16 @@ void pallindrome(char string[1000],int len)
     int state=0,i;
     for(i=0;i<loop;i++)
     {
-        if(tolower(string[i])!=tolower(string[len-i-1]))
+        if(tolower(string[i])==tolower(string[len-i-1]))
         {
             state = 1;
         }
     }
     if(state)
     {
-        printf("not pallindrome\n");
-    }else{
         printf("pallindrome\n");
+    }else{
+        printf("not pallindrome\n");
 
     }
 }
